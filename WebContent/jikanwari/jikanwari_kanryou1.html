@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>大原中学校</title>
+  <link rel="stylesheet" href="./css/jikanwari_kanryou.css">
+</head>
+<style>
+a {
+  color: #ffffff; /* リンクのデフォルトの色を白色に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+</style>
+  <h1><a href="../teacherhome.html">大原中学校</a></h1>
+
+<body>
+      <div>
+        編集が完了しました。
+      </div>
+
+
+    <p class="button-container">
+      <button name="home" onclick="goToHome()">ホームに戻る</button>
+      <button name="student" onclick="goToStudent()">選択画面に戻る</button>
+    </p>
+
+    <script>
+      function goToHome() {
+        window.location.href = '../teacherhome.html';
+      }
+
+      function goToStudent() {
+        window.location.href = 'jikanwari_sentaku1.html';
+      }
+    </script>
+  </body>
+</html>

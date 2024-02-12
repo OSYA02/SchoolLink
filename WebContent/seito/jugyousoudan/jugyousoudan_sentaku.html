@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホーム画面</title>
+<link rel="stylesheet" href="./css/jugyojkkksoudan_sentaku.css">
+</head>
+
+<body>
+
+<header>
+    <h1>大原中学校</h1>
+</header>
+
+<nav>
+    <div class="menu-button" onclick="goToStudentList()">相談フォーム</div>
+    <br>
+    <div class="menu-button" onclick="goToStudentAdd()">解説</div> <!-- Modified this line -->
+</nav>
+
+<section id="content">
+    <!-- 各メニューに関連するコンテンツをここに追加 -->
+</section>
+<script>
+    function goToStudentList() {
+      window.location.href = '授業相談画面.html'; // Replace 'studentlist.html' with the actual student list page
+    }
+
+    function goToStudentAdd() {
+      window.location.href = 'selecthome.html'; // Replace 'student1.html' with the actual student add page
+    }
+</script>
+
+</body>
+
+</html>

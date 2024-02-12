@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大原中学校　教師用</title>
+  <link rel="stylesheet" href="./css/seito_touroku_sentaku.css">
+</head>
+
+  <header>
+    <h1><a href="../teacherhome.html">大原中学校</a></h1>
+  </header>
+
+<body>
+  <div class="container">
+    <form id="studentForm">
+      <div class="form-row">
+        <label for="grade">学年:</label>
+        <select id="grade" name="grade" required>
+          <option value="1">1年</option>
+          <option value="2">2年</option>
+          <option value="3">3年</option>
+        </select>
+
+        <label for="class">クラス:</label>
+        <select id="class" name="class" required>
+          <option value="A">Aクラス</option>
+          <option value="B">Bクラス</option>
+          <option value="C">Cクラス</option>
+        </select>
+
+      </div>
+
+      <p id="errorMessage" style="color: red;"></p>
+    </form>
+  </div>
+
+  <script>
+    function modifyStudent() {
+      // Add logic for modifying student information
+      window.location.href = '修正.html';
+    }
+
+    function deleteStudent() {
+      // Add logic for deleting student information
+      window.location.href = '削除.html';
+    }
+
+    function goToHome() {
+      window.location.href = 'home.html'; // Replace with the actual home screen page
+    }
+
+    function goToSettings() {
+      window.location.href = 'settings.html'; // Replace with the actual settings screen page
+    }
+  </script>
+<!-- Add this div for the buttons -->
+<!-- Add the class "form-buttons" to the div containing the buttons -->
+<div class="form-buttons">
+    <button type="button" onclick="modifyStudent()">　　　修正　　　</button>
+    <button type="button" onclick="deleteStudent()">　　　削除　　　</button>
+    <button type="button" onclick="goToHome()">ホーム画面に戻る</button>
+    <button type="button" onclick="goToSettings()">　設定画面に戻る</button>
+</div>
+
+</body>
+
+</html>

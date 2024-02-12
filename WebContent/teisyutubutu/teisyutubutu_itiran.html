@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html class="">
+
+<head>
+    <meta charset="UTF-8">
+    <title>大原中学校</title>
+    <link rel="stylesheet" href="./css/teisyutubutu_itiran.css">
+</head>
+
+    <h1>大原中学校</h1>
+
+<script>
+
+    function submitForm() {
+        var grade = document.getElementById('grade').value;
+        var Class = document.getElementById('Class').value;
+        var radio = document.getElementById('radio').checked;
+
+        var errorMessage = document.getElementById('errorMessage');
+        errorMessage.innerText = '';
+
+        if (!grade || !Class || !radio) {
+            errorMessage.innerText = '入力されてないところがあります';
+            return;
+        }
+
+        localStorage.setItem('grade', grade);
+        localStorage.setItem('Class', Class);
+        localStorage.setItem('radio', radio);
+
+        window.location.href = 'teisyutu_zyokyo.html';
+    }
+
+    function deleteForm() {
+        var grade = document.getElementById('grade').value;
+        var Class = document.getElementById('Class').value;
+        var radio = document.getElementById('radio').checked;
+
+        var errorMessage = document.getElementById('errorMessage');
+        errorMessage.innerText = '';
+
+        if (!grade || !Class || !radio) {
+            errorMessage.innerText = '入力されてないところがあります';
+            return;
+        }
+
+        localStorage.setItem('grade', grade);
+        localStorage.setItem('Class', Class);
+        localStorage.setItem('radio', radio);
+
+        window.location.href = 'teisyutubutu_delete_kakunin.html';
+    }
+
+</script>
+
+
+
+
+<body>
+
+    <label class="">
+    </label>
+
+
+
+    <form>
+
+        <p id="errorMessage" style="color: red;"></p>
+
+        <label>学年・クラス</label>
+        <select id="grade" required>
+            <option value="1">1年</option>
+            <option value="2">2年</option>
+            <option value="3">3年</option>
+        </select>
+        <select id="Class" required>
+            <option value="A">Aクラス</option>
+            <option value="B">Bクラス</option>
+            <option value="C">Cクラス</option>
+        </select><br>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th><label for="subject">教科</label></th>
+                <th><label for="assignment">課題</label></th>
+                <th><label for="date">期限</label></th>
+                <th>✔</th>
+            </tr>
+            <tr>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td><input type="checkbox" onchange="updateDetails('〇〇', '〇〇', '〇〇', this)"></td>
+            </tr>
+            <tr>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td><input type="checkbox" onchange="updateDetails('〇〇', '〇〇', '〇〇', this)"></td>
+            </tr>
+            <tr>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td>〇〇</td>
+                <td><input type="checkbox" onchange="updateDetails('〇〇', '〇〇', '〇〇', this)"></td>
+            </tr>
+            </table>
+
+
+
+        <p></p>
+        <p></p>
+        <p></p>
+    </form>
+
+    <div class="input-container">
+        <input type="button" value="削除" onclick="deleteForm()">
+        <input type="button" value="確認" onclick="submitForm()">
+    </div>
+
+</body>
+</html>

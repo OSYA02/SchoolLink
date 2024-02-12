@@ -1,0 +1,54 @@
+head, h1{
+    background-color: #333;
+    }
+
+    h1{
+        padding: 30px 3px;
+        margin-top: -5px;
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa;
+    text-align: center;
+}
+
+
+select {
+    padding: 8px;
+    font-size: 16px;
+    flex: 1;
+    border: none;
+}
+
+
+.form-buttons {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+    .contentContainer iframe {
+      background-color: white; /* iframeの背景色 */
+      display: block;
+      margin: 20px auto;
+      border: none;
+      border-radius: 5px;
+      padding: 0;
+    }
+button {
+    margin-top: 10px;
+    font-size: 20px;
+    margin-right: 20px;
+}
+submit {
+    margin-top: 10px; /* Adjust as needed for vertical spacing between buttons */
+    font-size: 20px;
+    margin-right: 20px;
+}

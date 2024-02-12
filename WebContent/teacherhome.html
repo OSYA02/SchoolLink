@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大原中学校　教師用</title>
+  <link rel="stylesheet" href="teacherhome1.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>大原中学校</h1>
+  </header>
+
+  <nav>
+    <div class="menu-button" onclick="showji()">時間割設定</div>
+    <div class="menu-button" onclick="showte()">提出物管理</div>
+    <div class="menu-button" onclick="showke()">提示版</div>
+    <div class="menu-button" onclick="showkai()">授業相談</div>
+    <div class="menu-button" onclick="showse()">カウンセリング</div>
+    <div class="menu-button" onclick="showsei()">生徒一覧</div>
+  </nav>
+
+  <section id="content">
+    <!-- 各メニューに関連するコンテンツをここに追加 -->
+  </section>
+
+  <footer>
+  </footer>
+
+  <script>
+    function showContent(menu) {
+      // ここで各メニューに関連するコンテンツを表示する処理を追加
+      document.getElementById('content').innerHTML = `<p>${menu}のコンテンツが表示されます。</p>`;
+    }
+
+    function goToStudentList() {
+      window.location.href = 'student.html'; // Replace 'student.html' with the actual student list page
+    }
+
+    function showji() {
+      window.location.href = './jikanwari/jikanwari_sentaku1.html';
+    }
+
+    function showte() {
+      window.location.href = './teisyutubutu/teisyutubutu.html';
+    }
+
+    function showse() {
+      window.location.href = './カウンセリング/予約確認選択画面.html';
+    }
+
+    function showke() {
+      window.location.href = './掲示板/Kyoshi_keijibanHome.html';
+    }
+
+    function showkai() {
+      window.location.href = './授業相談/授業解説選択画面.html';
+    }
+
+    function showsei() {
+      window.location.href = './生徒一覧/student.html';
+    }
+  </script>
+
+</body>
+
+</html>

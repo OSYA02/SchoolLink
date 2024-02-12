@@ -1,0 +1,59 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+h1{
+    background-color: #333;
+        padding: 30px 3px;
+        margin-top: -5px;
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+    }
+
+div {
+    max-width: 500px;
+    font-size: 25px;
+    font-weight: bolder;
+    margin: 50px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 2px solid #2424dc;
+}
+
+
+
+button[name="home"], button[name="student"] {
+    font-size: 23px;
+    font-weight: bolder;
+    width: 250px; /* Set the desired width */
+    height: 80px; /* Set the desired height */
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 12px;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px; /* Add space between buttons */
+    display: inline-block; /* Make buttons inline-block to respect width and height properties */
+}
+
+
+button:hover {
+    background-color: #005910;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:  #FFD5EC;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 5px;
+    text-align: center;
+
+  }
+
+  header h1 {
+    font-size: 24px;
+  }
+
+  nav {
+    background-color:  #FFD5EC;
+    padding: 10px;
+    text-align: center;
+  }
+
+  .menu-button {
+    text-decoration: none;
+    color: #fff;
+    padding: 35px 10px;
+    margin: 15px auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    display: block;
+    background-color: #4285f4;
+    font-size: 20px;
+    width: 66.66%; /* Adjusted width to 66.66% */
+  }
+
+  .menu-button:hover {
+    background-color: #1c3aa9;
+  }
+
+  section {
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+  }
+

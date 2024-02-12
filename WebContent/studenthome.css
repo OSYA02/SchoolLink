@@ -1,0 +1,100 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #FFD5EC;
+}
+
+
+header {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+}
+
+h1{
+  padding: 30px 3px;
+  margin-top: -5px;
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+}
+
+nav {
+  background-color:  #FFD5EC;
+  padding: -5px;
+  text-align: center;
+}
+
+.menu-button {
+  text-decoration: none;
+  color: #000000;
+  padding: 20px;
+  margin: 15px auto;
+  border: 2px solid #646161;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Yu Mincho";
+  display: block;
+  background-color: #FFC7AF;
+  width: 66.66%;
+  box-sizing: border-box;
+  font-size: 26px;
+  font-weight: bold;
+
+}
+
+.menu-button:nth-child(2) {
+  background-color: #FFBEDA;
+}
+
+.menu-button:nth-child(3) {
+  background-color: #DCC2FF;
+
+}
+
+.menu-button:nth-child(4) {
+  background-color:  #BAD3FF;
+
+}
+
+.menu-button:nth-child(5) {
+  background-color: #C2EEFF;
+
+}
+.menu-button:nth-child(6) {
+  background-color:  #EDFFBE;
+  }
+
+  .menu-button:nth-child(1):hover {
+    background-color: #FF8856;
+  }
+  .menu-button:nth-child(2):hover {
+    background-color: #FF82B2
+  }
+  .menu-button:nth-child(3):hover {
+    background-color: #B384FF
+  }
+  .menu-button:nth-child(4):hover {
+    background-color: #75A9FF
+  }
+  .menu-button:nth-child(5):hover {
+    background-color: #77EEFF
+  }
+  .menu-button:nth-child(6):hover {
+    background-color: #DBFF71
+  }
+
+
+
+section {
+  padding: 20px;
+
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}

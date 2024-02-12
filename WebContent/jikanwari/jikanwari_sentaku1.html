@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <style>
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    .form-row {
+      text-align: center; /* 中央揃え */
+    }
+
+    iframe {
+      display: block;
+      margin: 20px auto;
+      border: none;
+      border-radius: 5px;
+      padding: 0;
+    }
+
+    .form-buttons1 {
+      text-align: right; /* 右寄せ */
+      align-self: flex-end;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin-top: 10px;
+      font-size: 20px;
+      margin-right: 20px;
+    }
+    .form-buttons1 input {
+      font-size: 20px; /* フォントサイズを20pxに設定 */
+    }
+a {
+  color: #ffffff; /* リンクのデフォルトの色を白色に設定 */
+  text-decoration: none; /* リンクの下線を削除 */
+}
+  </style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大原中学校</title>
+  <link rel="stylesheet" href="./css/jikanwari_sentaku.css">
+</head>
+
+  <h1><a href="../teacherhome.html">大原中学校</a></h1>
+
+<body>
+  <div class="container">
+	<form action="Jikanwari_hensyu" method="get">
+      <div class="form-row">
+	  <label for="grade">学年・クラス:</label>
+	  <select name="class" id="fruitSelect" onchange="updateDisplay()">
+	    <option value="class1a" selected>1_A</option>
+	    <option value="class1b">1_B</option>
+	    <option value="class1c">1_C</option>
+	    <option value="class2a">2_A</option>
+	    <option value="class2b">2_B</option>
+	    <option value="class2c">2_C</option>
+	    <option value="class3a">3_A</option>
+	    <option value="class3b">3_B</option>
+	    <option value="class3c">3_C</option>
+	  </select>
+      </div>
+      <p id="errorMessage" style="color: red;"></p>
+
+    <div id="contentContainer" class="contentContainer">
+    <!-- 初期コンテンツ -->
+    <p id="class1aContent">
+      <iframe src="Class1_a" width="600" height="400"></iframe>
+    </p>
+    <p id="class1bContent" style="display:none;">
+      <iframe src="Class1_b" width="600" height="400"></iframe>
+    </p>
+    <p id="class1cContent" style="display:none;">
+      <iframe src="Class1_c" width="600" height="400"></iframe>
+    </p>
+
+    <p id="class2aContent" style="display:none;">
+      <iframe src="Class2_a" width="600" height="400"></iframe>
+    </p>
+    <p id="class2bContent" style="display:none;">
+      <iframe src="Class2_b" width="600" height="400"></iframe>
+    </p>
+    <p id="class2cContent" style="display:none;">
+      <iframe src="Class2_c" width="600" height="400"></iframe>
+    </p>
+
+    <p id="class3aContent" style="display:none;">
+      <iframe src="Class3_a" width="600" height="400"></iframe>
+    </p>
+    <p id="class3bContent" style="display:none;">
+      <iframe src="Class3_b" width="600" height="400"></iframe>
+    </p>
+    <p id="class3cContent" style="display:none;">
+      <iframe src="Class3_c" width="600" height="400"></iframe>
+    </p>
+    </div>
+		<div class="form-buttons1">
+    	   <input class="submit" type="submit" value="　　　編集　　　">
+    	</div>
+    </form>
+  </div>
+
+  <script>
+    function modifyStudent() {
+      // Add logic for modifying student information
+      window.location.href = 'henshuu.html';
+    }
+    function goToHome() {
+      window.location.href = '../teacherhome.html'; // Replace with the actual home screen page
+    }
+
+    function goToSettings() {
+      window.location.href = 'settings.html'; // Replace with the actual settings screen page
+    }
+
+    function updateDisplay() {
+        var selectElement = document.getElementById('fruitSelect');
+        var selectedValue = selectElement.value;
+        var outputElement = document.getElementById('output');
+
+        if (selectedValue === 'class1a') {
+            showContent('class1aContent');
+          } else if (selectedValue === 'class1b') {
+            showContent('class1bContent');
+          } else if (selectedValue === 'class1c') {
+            showContent('class1cContent');
+          } else if (selectedValue === 'class2a') {
+            showContent('class2aContent');
+          } else if (selectedValue === 'class2b') {
+            showContent('class2bContent');
+          } else if (selectedValue === 'class2c') {
+            showContent('class2cContent');
+          } else if (selectedValue === 'class3a') {
+            showContent('class3aContent');
+          } else if (selectedValue === 'class3b') {
+            showContent('class3bContent');
+          } else if (selectedValue === 'class3c') {
+            showContent('class3cContent');
+          }
+        }
+
+      function showContent(contentId) {
+        var allContents = document.querySelectorAll('#contentContainer > p');
+        allContents.forEach(function (content) {
+          content.style.display = 'none';
+        });
+
+        var selectedContent = document.getElementById(contentId);
+        selectedContent.style.display = 'block';
+      }
+  </script>
+<div class="form-buttons">
+    <button type="button" onclick="goToHome()">ホーム画面に戻る</button>
+</div>
+
+</body>
+
+</html>

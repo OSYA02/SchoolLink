@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html class="">
+
+<head>
+<meta charset="UTF-8">
+<title>大原中学校</title>
+<link rel="stylesheet" href="./css/teisyutubutu_tuika.css">
+</head>
+
+<h1>大原中学校</h1>
+
+
+<script>
+    function submitForm(){
+      var Subject = document.getElementById('Subject').value;
+      var grade = document.getElementById('grade').value;
+      var Class = document.getElementById('Class').value;
+      var assignment = document.getElementById('assignment').value;
+      var Day = document.getElementById('Day').value;
+      var etc = document.getElementById('etc').value;
+
+      var errorMessage = document.getElementById('errorMessage');
+      errorMessage.innerText = '';
+
+      if (!Subject || !grade || !Class || !assignment || !Day || !etc) {
+        errorMessage.innerText = '入力されてないところがあります';
+        return;
+      }
+
+      localStorage.setItem('Subject', Subject);
+      localStorage.setItem('grade', grade);
+      localStorage.setItem('Class', Class);
+      localStorage.setItem('assignment', assignment);
+      localStorage.setItem('Day', Day);
+      localStorage.setItem('etc', etc);
+
+      window.location.href = 'teisyutubutu_tuika_kakunin.html';
+    }
+
+</script>
+
+<body>
+<header class="">
+</header>
+<form>
+
+        <p id="errorMessage" style="color: red;"></p>
+
+        <label>教科</label>
+<select id="Subject" required>
+<option value="国語">国語</option>
+<option value="数学">数学</option>
+<option value="理科">理科</option>
+<option value="社会">社会</option>
+<option value="英語">英語</option>
+</select><br>
+
+        <label>学年・クラス</label>
+<select id="grade" required>
+<option value="1">1年</option>
+<option value="2">2年</option>
+<option value="3">3年</option>
+</select>
+<select id="Class" required>
+<option value="A">Aクラス</option>
+<option value="B">Bクラス</option>
+<option value="C">Cクラス</option>
+</select><br>
+
+        <label>課題名</label>
+<input type="text" id="assignment" required><br>
+
+        <label for="Month">期限</label>
+<input type="date" id="Day" required><br>
+
+        <label >課題内容</label>
+<input type="text" id="etc" required><br>
+
+</form>
+        <input type="button" value="確認" onclick="submitForm()">
+</body>
+</html>

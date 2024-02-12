@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大原中学校　生徒用</title>
+  <link rel="stylesheet" href="studenthome.css">
+</head>
+
+<body>
+
+  <header>
+    <h1>大原中学校</h1>
+  </header>
+
+  <nav>
+    <div class="menu-button" onclick="showContent('submission')">時間割</div>
+    <dialog>
+      <p>提出物について</p>
+      <p>
+        国語（12日）<br>
+        　・漢字ノート<br>
+        英語（１５日）<br>
+        　・英語プリント<br>
+      </p>
+      <button id="close">閉じる</button>
+    </dialog>
+    <button id="show" class="menu-button">提出物管理</button>
+    <div class="menu-button" onclick="showContent1('consultation')">提示版</div>
+    <div class="menu-button" onclick="gojugyou()">授業相談</div>
+    <div class="menu-button" onclick="gokau()">カウンセリング</div>
+    <div class="menu-button" onclick="goToStudentList()">お知らせ</div> <!-- Modified this line -->
+  </nav>
+
+  <section id="content">
+    <!-- 各メニューに関連するコンテンツをここに追加 -->
+  </section>
+
+
+
+
+  <script>
+    function showContent(menu) {
+      // ここで各メニューに関連するコンテンツを表示する処理を追加
+      document.getElementById('content').innerHTML = `<p>${menu}のコンテンツが表示されます。</p>`;
+    }
+
+    function showContent5(counseling) {
+      window.location.href = 'studenthome2.html'; // Replace 'student.html' with the actual student list page
+    }
+
+    function goToStudentList() {
+      window.location.href = 'student.html'; // Replace 'student.html' with the actual student list page
+    }
+
+    function goTime() {
+      window.location.href = '時間割選択画面.html';
+    }
+
+    function gojugyou() {
+      window.location.href = './.html';
+    }
+    function showContent1() {
+      window.location.href = './掲示板/Kyoshi_keijibanHome.html';
+    }
+
+    function gokau() {
+      window.location.href = './カウンセリング/studenthome2.html';
+    }
+
+    var dialog = document.querySelector('dialog');
+    var btn_show = document.getElementById('show');
+    var btn_close = document.getElementById('close');
+    btn_show.addEventListener('click', function() {
+      dialog.show();
+    }, false);
+    btn_close.addEventListener('click', function() {
+      dialog.close();
+    }, false);
+  </script>
+
+</body>
+
+</html>

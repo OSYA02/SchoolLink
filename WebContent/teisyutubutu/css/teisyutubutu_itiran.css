@@ -1,0 +1,102 @@
+body, h1, p, label, input, select {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;
+}
+
+head, h1{
+    background-color: #333;
+    }
+
+    h1{
+        padding: 30px 3px;
+        margin-top: -5px;
+        text-align: center;
+        font-size: 36px;
+        color: #fff;
+    }
+
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border: 2px solid #2424dc;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #4CAF50;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+}
+
+select, input[type="radio"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-left: -200px;
+}
+
+.input-container {
+    display: flex;
+    justify-content: center; /* Change to center */
+    margin-top: 20px; /* Add margin-top for spacing */
+}
+
+.input-container input[type="button"] {
+    width: 190px; /* Adjust the button width */
+    margin: 0 25px; /* Adjust the margin between buttons */
+}
+
+
+input[type="button"] {
+    width:180px;
+    padding: 5px 25px;
+    margin: 0 2px;
+    color:#fff;
+    margin: auto;
+    font-size: xx-large;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #4CAF50;
+}
+
+input[type="button"]:hover {
+    background-color: #165b1a;
+}
+
+#errorMessage {
+    margin-bottom: 16px;
+}
+
+
